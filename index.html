@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Personal Blog of Kwan Wai-Pang">
+  <meta name="keywords" content="SLAM, Event Camera, Robotics">
+
+  <!-- 确保您已经设置了视口的meta标签用于自适应屏幕大小的 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <title>Kwan Wai-Pang's PhD Thesis</title> -->
+  <title>HKU-ArcLab | EVI-SAM</title>
+  <meta name="author" content="Kwan Wai-Pang " />
+
+  <!-- OpenGraph 用于更新页面-->
+  <meta property="og:site_name" content="Kwan Wai-Pang's PhD Thesis" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Kwan Wai-Pang | PhD Thesis" />
+  <meta property="og:description" content="Welcome to EVI-SAM 😊" />
+  <meta property="og:image" content="https://kwanwaipang.github.io/Poster_files/hku_logo.jpg" />
+
+  <meta property="og:locale" content="en" />
+
+  <meta name="google-site-verification" content="Jtxa1xy6N3_2RjVVFrZgXjPZ0AHklxJXQ1eQ6QXNWr8" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R1QX9D95NS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-R1QX9D95NS');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="https://kwanwaipang.github.io/Poster_files/hku_logo.jpg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          
+          <a class="navbar-item" href="https://kwanwaipang.github.io/Mono-EIO">
+            Mono-EIO
+          </a>
+
+          <a class="navbar-item" href="https://kwanwaipang.github.io/PL-EVIO">
+            PL-EVIO
+          </a>
+
+          <a class="navbar-item" href="https://kwanwaipang.github.io/ESVIO">
+            ESVIO
+          </a>
+
+
+          <a class="navbar-item" href="https://kwanwaipang.github.io/EVI-SAM">
+            EVI-SAM
+          </a>
+
+          <a class="navbar-item" href="https://kwanwaipang.github.io/DEIO">
+            DEIO
+          </a>
+
+          <a class="navbar-item" href="https://arclab-hku.github.io/SuperEIO">
+            SuperEIO
+          </a>
+
+          <a class="navbar-item" target="_blank" href="https://arclab-hku.github.io/ecmd/">
+            ECMD Dataset
+          </a>
+
+          <a class="navbar-item" target="_blank" href="https://github.com/arclab-hku/Event_based_VO-VIO-SLAM">
+            HKU Dataset
+          </a>
+
+          <!-- <a class="navbar-item" target="_blank" href="https://kwanwaipang.github.io/File/Representative_works/Representative_works.html">
+            Representative Works
+          </a> -->
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">EVI-SAM: Robust, Real-time, Tightly-coupled Event-Visual-Inertial State Estimation and 3D Dense Mapping</h1>
+
+          <!-- 作者 -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://kwanwaipang.github.io/" target="_blank">Weipeng Guan</a><sup>1</sup>,
+            </span>
+
+            <span class="author-block">
+              <a href="https://github.com/cpymaple" target="_blank">Peiyu Chen</a><sup>1</sup>,
+            </span>
+
+            <span class="author-block">
+              <a href="https://github.com/huibinzhao" target="_blank">Huibin Zhao</a><sup>1</sup>,
+            </span>
+
+            <span class="author-block">
+              <a href="" target="_blank">Yu Wang</a><sup>1</sup>,
+            </span>
+
+            <span class="author-block">
+              <a href="https://arclab.hku.hk/PengLu.html" target="_blank">Peng Lu</a><sup>1</sup>
+            </span>
+            
+          </div>
+          
+          <!-- 单位 -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>The University of Hong Kong</span>
+          </div>
+
+          <!-- 各种link -->
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://onlinelibrary.wiley.com/doi/10.1002/aisy.202400243"
+                   target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2312.11911"
+                    target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=Nn40U4e5Si8"
+                    target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/KwanWaiPang/EVI-SAM"
+                    target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span> -->
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/arclab-hku/Event_based_VO-VIO-SLAM/blob/main/EVI-SAM/data_srcipt.md"
+                    target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 参考代码：https://github.com/nerfies/nerfies.github.io/blob/main/index.html -->
+<!-- 对应网页效果：https://nerfies.github.io/ -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+
+        <!-- 首页图 -->
+        <img src="https://github.com/arclab-hku/Event_based_VO-VIO-SLAM/raw/main/EVI-SAM/first_image.png"
+        class="interpolation-image"
+        alt="cover figure"/>
+
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+        Event cameras are bio-inspired, motion-activated sensors that demonstrate substantial potential in handling challenging situations, such as motion blur and high-dynamic range.
+        In this paper, we introduce EVI-SAM to tackle the problem of 6-DoF pose tracking and 3D dense reconstruction using the monocular event camera.
+        A novel event-based hybrid tracking framework is designed to estimate the pose, leveraging the robustness of feature matching and the precision of direct alignment.
+        Specifically, we develop an event-based 2D-2D alignment to construct the photometric constraint, and tightly integrate it with the event-based re-projection constraint. 
+        The mapping module recovers the dense and colorful depth of the scene through the image-guided event-based mapping method.
+        Subsequently, the appearance, texture, and surface mesh of the 3D scene can be reconstructed by fusing the dense depth map from multiple viewpoints using truncated signed distance function (TSDF) fusion.
+        To the best of our knowledge, this is the first non-learning work to realize event-based dense mapping. 
+        Numerical evaluations are performed on both publicly available and self-collected datasets, which qualitatively and quantitatively demonstrate the superior performance of our method.
+        Our EVI-SAM effectively balances accuracy and robustness while maintaining computational efficiency, showcasing superior pose tracking and dense mapping performance in challenging scenarios.
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video Demo</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/Nn40U4e5Si8?si=KcT_4MUfYbQOIkDR"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- 与nerf的方法对比建图的效果 -->
+    <p><br></p>
+    <p><br></p>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+
+        <h2 class="title is-3">6-DoF Pose Tracking</h2>
+        <div class="content has-text-justified">
+          To the best of our knowledge, this is the first hybrid approach that integrates both photometric (direct-based) and geometric (feature-based) errors within an event-based framework.
+          </div>
+          <div class="content has-text-centered">
+            <video id="replay-video"
+                    autoplay
+                    controls
+                    muted
+                    preload
+                    playsinline
+                    width="100%">
+              <source src="https://kwanwaipang.github.io/SLAM_DEMO/hybrid_posetracking.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        <h2 class="title is-3">3D Dense Mapping</h2>
+        <div class="content has-text-justified">
+          To the best of our knowledge, this is the first framework that employs a non-learning approach to achieve event-based dense and textured 3D reconstruction without GPU acceleration..
+        </div>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                  autoplay
+                  controls
+                  muted
+                  preload
+                  playsinline
+                  width="100%">
+            <source src="https://kwanwaipang.github.io/SLAM_DEMO/evi_sam.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        
+        <div class="content has-text-justified">
+        <h2 class="title is-3">Real Time Mapping using CPU</h2>
+          The following figure is the visualization of the estimated camera trajectory and global 3D reconstruction (surface mesh) of our EVI-SAM. 
+          Sequentially display from right to left includes the event-based dense point clouds with texture information and intensity images, at selected viewpoints.
+        </div>
+        <div class="columns is-centered">      
+          <div class="column">
+              <img src="./static/img/EVI-SAM_global_mapping.jpg">
+          </div>
+        </div>
+
+        <br>
+        <div class="content has-text-justified">
+        <h2 class="title is-3">Mapping Performance Comparison with NeRF</h2>
+          Qualitative comparison of our EVI-SAM, the Instant-NGP (with COLMAP for localization), and the ground truth image view.
+           The red box highlights the difference of the reconstruction quality and the motion blur caused by image blur in NeRF-based methods.
+           While our event-based dense mapping demonstrates performance comparable to the Instant-NGP.
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column">
+                <img src="./static/img/comparison_nerf1.png">
+          </div>
+        </div>
+
+        <div class="columns is-centered">      
+          <div class="column">
+              <img src="./static/img/comparison_nerf2.png">
+          </div>
+        </div>
+
+        <br>
+        <div class="content has-text-justified">
+        <h2 class="title is-3">Dense Mapping under Aggressive Motion</h2>
+          We evaluate that our event-based dense mapping even can recover the 3D scene that involves aggressive motions, where the maximum angular velocity reaches up to 5 rad/s (approximately 290&deg/s), and the linear acceleration reaches up to 18 m<sup>2</sup>/s.
+        </div>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                  autoplay
+                  controls
+                  muted
+                  preload
+                  playsinline
+                  width="100%">
+            <source src="https://kwanwaipang.github.io/SLAM_DEMO/aggressive_mapping.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+
+
+<!-- 引用格式 -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @article{GWPHKU:EVI-SAM,
+        title={EVI-SAM: Robust, Real-time, Tightly-coupled Event-Visual-Inertial State Estimation and 3D Dense Mapping},
+        author={Guan, Weipeng and Chen, Peiyu and Zhao, Huibin and Wang, Yu and Lu, Peng},
+        journal={Advanced Intelligent Systems},
+        year={2024}
+      }
+    </code></pre>
+  </div>
+</section>
+
+
+<!-- 页脚 -->
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+            <br>
+            This website template is from <a
+            href="https://github.com/nerfies/nerfies.github.io">source code</a>.
+            We sincerely thank the author for developing and open-sourcing this template.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+
+  // 当 iframe 加载完成后执行
+  document.getElementById('videoIframe1').onload = function() {
+      // 隐藏加载中的动图
+      document.getElementById('loadingImage1').style.display = 'none';
+      // 显示 iframe
+      document.getElementById('videoIframe1').style.display = 'block';
+  };
+
+  document.getElementById('videoIframe2').onload = function() {
+      // 隐藏加载中的动图
+      document.getElementById('loadingImage2').style.display = 'none';
+      // 显示 iframe
+      document.getElementById('videoIframe2').style.display = 'block';
+  };
+
+  document.getElementById('videoIframe3').onload = function() {
+      // 隐藏加载中的动图
+      document.getElementById('loadingImage3').style.display = 'none';
+      // 显示 iframe
+      document.getElementById('videoIframe3').style.display = 'block';
+  };
+
+  document.getElementById('videoIframe4').onload = function() {
+      // 隐藏加载中的动图
+      document.getElementById('loadingImage4').style.display = 'none';
+      // 显示 iframe
+      document.getElementById('videoIframe4').style.display = 'block';
+  };
+
+  document.getElementById('videoIframe5').onload = function() {
+      // 隐藏加载中的动图
+      document.getElementById('loadingImage5').style.display = 'none';
+      // 显示 iframe
+      document.getElementById('videoIframe5').style.display = 'block';
+  };
+
+
+</script>
+
+</body>
+</html>
